@@ -81,8 +81,10 @@
         x = e.pageX;
         y = e.pageY;
         draw();
+
+        e.preventDefault();
         // color = 'red';
-      }, true);
+      }, false);
 
       // clear when phone moves around
       window.addEventListener('orientationchange', function (e) {
