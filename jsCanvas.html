@@ -13,7 +13,7 @@
     <!-- <h1>Kelsey's Canvas</h1> -->
     <canvas id='canvas'></canvas>
 
-    <!-- <input type = 'color' value='#EE00CC' id='cp'> -->
+    <input type = 'color' value='#EE00CC' id='cp'>
 
   	<script>
   		var canvas = document.querySelector('canvas');
@@ -82,23 +82,22 @@
         y = e.pageY;
         draw();
         color = 'red';
-      });
+      }, false);
 
       // clear when phone moves around
       window.addEventListener('orientationchange', function (e) {
         ctx.clearRect(0, 0, 10000, 10000);
         ctx.canvas.width = window.innerWidth*0.8;
         ctx.canvas.height = window.innerHeight*0.8;
-      })
-
-      // draw();
+      });
 
       // color picker
-      // c = document.querySelector('#cp');
-      // console.log(c)
+      c = document.querySelector('#cp');
+      window.addEventListener('change', function (e) {
+        color = c.value;
+      });
 
-      // window.addEventListener('click', someFunction, false);
-      // window.addEventListener('mouseover', someFunction, false);
+
     </script>
   </body>
 </html>
