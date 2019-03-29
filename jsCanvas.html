@@ -15,6 +15,8 @@
 
     <input type = 'color' value='#EE00CC' id='cp'>
 
+    hi
+
   	<script>
   		var canvas = document.querySelector('canvas');
   		var ctx = canvas.getContext('2d');
@@ -78,12 +80,10 @@
 
       // to draw on touch screen
       window.addEventListener('touchmove', function (e) {
+        event.preventDefault();
         x = e.pageX;
         y = e.pageY;
         draw();
-
-        event.preventDefault();
-        // color = 'red';
       }, false);
 
       // clear when phone moves around
