@@ -73,8 +73,10 @@
         }
       });
 
-      // to change the color
+      // to draw on touch screen
       window.addEventListener('touchmove', function (e) {
+        x = e.pageX;
+        y = e.pageY;
         draw();
         color = 'red';
       });
